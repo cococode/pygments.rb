@@ -189,7 +189,7 @@ module Pygments
       opts[:options][:outencoding] ||= 'utf-8'
 
       #fix the code and out_header encoding imcompliable problem 
-      code.force_encoding(opt[:options][:encoding])
+      code.force_encoding(opts[:options][:encoding])
 
       # Get back the string from mentos and force encoding if we can
       str = mentos(:highlight, nil, opts, code)
