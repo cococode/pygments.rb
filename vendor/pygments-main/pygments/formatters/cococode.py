@@ -94,7 +94,7 @@ class CocoCodeFormatter(Formatter):
 
         yield '<table class="lines"><tr>'
         if sln:
-          yield '<td><pre class="line_numbers">' + ls + '</pre></td>'
+          yield '<td><pre class="line_numbers" style="width:%dpx">' % (len(str(fl + lncount)) * 5 + 20) + ls + '</pre></td>'
         yield '<td><div class="highlight"><pre>'
         yield dummyoutfile.getvalue()
         yield '</pre></div></td></tr></table>'
